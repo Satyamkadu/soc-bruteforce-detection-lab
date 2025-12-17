@@ -61,3 +61,16 @@ The incident was initially identified through review of authentication logs show
 - Temporary IP bans were enforced for a duration of ten minutes to disrupt brute-force activity.
 - SSH authentication monitoring was strengthened to improve visibility into repeated login failures.
 - Additional hardening measures were identified to further reduce the SSH attack surface.
+
+## Lessons Learned
+- Repeated SSH authentication failures provide early indicators of brute-force activity.
+- Automated security controls significantly reduce the impact of credential-based attacks.
+- Centralized log review enables timely detection and response to suspicious behavior.
+- Credential-based services such as SSH remain common targets for automated attacks.
+
+## Recommendations
+- Enforce stronger authentication mechanisms for SSH access.
+- Regularly review authentication logs to identify abnormal login patterns.
+- Implement alerting for repeated authentication failures to improve response time.
+- Apply additional SSH hardening measures to further reduce the attack surface.
+- Periodically test detection and response processes using controlled lab simulations.
