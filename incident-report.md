@@ -37,3 +37,16 @@ The incident was initially identified through review of authentication logs show
 - Repeated password guessing behavior
 - Consistent source IP throughout the attack window
 - Behavior consistent with brute-force automation
+
+## Impact Assessment
+- An unauthorized SSH login occurred during the attack window.
+- The incident impacted a single Ubuntu system within the lab environment.
+- No persistence mechanisms or privilege escalation were observed.
+- No data modification, exfiltration, or integrity impact was identified.
+- No service disruption or availability issues were detected.
+
+## Severity Justification
+- Repeated unauthorized authentication attempts confirmed active brute-force behavior.
+- Login attempts occurred in rapid succession, indicating automated password guessing.
+- The attack scope was limited to a single system and user account.
+- While initial access occurred, further access and escalation were restricted, limiting overall impact.
