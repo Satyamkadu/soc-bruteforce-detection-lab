@@ -74,3 +74,13 @@ The incident was initially identified through review of authentication logs show
 - Implement alerting for repeated authentication failures to improve response time.
 - Apply additional SSH hardening measures to further reduce the attack surface.
 - Periodically test detection and response processes using controlled lab simulations.
+
+## Supporting Evidence
+- Authentication log excerpts showing repeated SSH failures (`screenshots/auth-log-failed-ssh.png`)
+- Brute-force activity output from attacker system (`screenshots/hydra-bruteforce-output.png`)
+- IP blocking confirmation from automated controls (`screenshots/fail2ban-ip-ban.png`)
+
+## Analyst Details
+- **Analyst Name:** Satyam Kadu
+- **Role:** SOC Analyst Trainee (Lab Simulation)
+- **Report Date:** 15 Dec 2025
