@@ -14,7 +14,26 @@ On 15 Dec 2025, a simulated SSH brute-force attack was detected against an Ubunt
 
 ## Environment Details
 - **Victim System:** Ubuntu 24.04 (SSH server)
-- **Attacker System:** Kali 2025.04
+- **Attacker System:** Kali Linux 2025.04
 - **Network Configuration:** Bridged Adapter (Internal lab network)
 - **Targeted Service:** OpenSSH (Port 22)
 - **Log Sources:** /var/log/auth.log
+
+## Detection & Analysis
+
+### Initial Detection
+The incident was initially identified through review of authentication logs showing repeated SSH login failures over a short time period. The volume and frequency of failed authentication attempts indicated abnormal SSH activity requiring further analysis.
+
+### Log Analysis
+- Authentication events were analyzed from `/var/log/auth.log`
+- Multiple failed SSH login attempts were recorded over a short period
+- All authentication attempts originated from a single source IP address
+- The same user account was repeatedly targeted during the attack
+- Login failures occurred in rapid succession, consistent with automated activity
+- A successful authentication was observed following multiple failed attempts
+
+### Attack Characteristics
+- High-frequency SSH authentication attempts
+- Repeated password guessing behavior
+- Consistent source IP throughout the attack window
+- Behavior consistent with brute-force automation
